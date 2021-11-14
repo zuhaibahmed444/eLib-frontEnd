@@ -1,0 +1,41 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <mat-card class="card-color" style="border-radius: 15px;">
+                    <div class="container text-center">
+                        <img class="ssmm" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsJ3k4dzEQ4eB4p5WeABerKGiMJZ8-hgdf2g&usqp=CAU" alt="">
+                      </div>
+                      <h2 class="text-center">Login</h2>
+                      <form (ngSubmit)="formSubmit()">
+                        <mat-form-field class="full-width" appearance="legacy">
+                            <mat-label>Email</mat-label>
+                            <input
+                            [(ngModel)]="loginData.email"
+                            name="email"
+                            type="email" matInput placeholder="Enter Email">
+                            <mat-icon matSuffix>alternate_email</mat-icon>
+                          </mat-form-field>
+                        
+                        <mat-form-field class ="full-width" appearance="legacy">
+                            <mat-label>Password</mat-label>
+                            <input
+                            [(ngModel)]="loginData.password"
+                            name="password"
+                            type="password" matInput placeholder="Enter Password">
+                            <mat-icon matSuffix>error</mat-icon>
+                          </mat-form-field>
+                          <div class="container text-center">
+                            <button type="submit" mat-raised-button color="primary">
+                              Login
+                            </button>
+                        </div>
+                      </form>
+      
+
+                
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

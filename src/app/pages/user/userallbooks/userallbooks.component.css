@@ -1,0 +1,16 @@
+.truncate {
+    display: block;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .example-header-image {
+    background-image: url("/assets/book1.png");
+    background-size: cover;
+  }
+
+.matchip{
+  background-color: #113CFC;
+}
+  

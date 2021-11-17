@@ -13,4 +13,17 @@ export class AccessService {
     return this.http.post(`${baseUrl}/accessreq/`,req);
   }
 
+  public getAllAcessReq(){
+    return this.http.get(`${baseUrl}/accessreq/`);
+  }
+
+  public getAccessReqByUser(email:any){
+    return this.http.post(`${baseUrl}/accessreq/user`,email);
+  }
+
+  public getAccessReqByAdmin(){
+    return this.http.get(`${baseUrl}/accessreq/active`);
+  }
+  
+
 }

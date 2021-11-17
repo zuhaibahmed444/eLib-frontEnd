@@ -1,7 +1,14 @@
-<div>
-	<app-navbar></app-navbar>
+<ngx-ui-loader
+  fgsColor="#5C7AEA"
+  pbColor="#5C7AEA"
+  text="Loading.."
+  pbThickness="6"
+  textColor="#5C7AEA"
+></ngx-ui-loader>
 
-	<!-- dynamic content -->
-	<router-outlet></router-outlet>
+<div ngxUiLoaderBlurred blur="6">
+  <app-navbar></app-navbar>
 
+  <!-- dynamic content -->
+  <router-outlet></router-outlet>
 </div>

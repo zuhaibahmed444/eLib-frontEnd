@@ -1,0 +1,62 @@
+<mat-card style="border-radius: 15px;">
+    <h1>Add New Book</h1>
+  
+    <mat-card-content>
+      <div class="bootstrap-wrapper">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <form >
+              <mat-form-field class="w100" appearance="outline">
+                <mat-label>Title</mat-label>
+  
+                <input
+                  required
+                  autofocus
+                  type="text"
+                  name="bookName"
+                  matInput
+                  placeholder="Enter title"
+                  [(ngModel)]="book.bookName"
+                />
+              </mat-form-field>
+  
+              <mat-form-field class="w100" appearance="outline">
+                <mat-label>Author</mat-label>
+                <input
+                required
+                autofocus
+                type="text"
+                name="bookAuthor"
+                matInput
+                placeholder="Enter Author Name"
+                [(ngModel)]="book.bookAuthor"
+              />
+               
+              </mat-form-field>
+              <mat-form-field class="w100" appearance="outline">
+                <mat-label>Year Of Publish</mat-label>
+                <input
+                required
+                autofocus
+                type="text"
+                name="yearPublished"
+                matInput
+                placeholder="Enter Year"
+                [(ngModel)]="book.yearPublished"
+              /></mat-form-field>
+            </form>
+            <div>
+                <input mat-button color = "primary" type="file" (change)="onFileChanged($event)">
+            </div>
+            <br>
+            <div>
+                <button mat-raised-button color="primary" (click)="onUpload()">
+                    Add Book
+                </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  

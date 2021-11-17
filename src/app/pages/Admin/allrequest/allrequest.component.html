@@ -5,7 +5,7 @@
                 <div mat-subheader>Requests</div>
                 <mat-list-item>
                     <div class="col-md-4 text-center">
-                        <p>Request ID</p>
+                        <p>User Email</p>
                     </div>
                     <div class="col-md-4 text-center">
                         <p>Book Name</p>
@@ -15,9 +15,9 @@
                     </div>
                     <mat-divider></mat-divider>
                 </mat-list-item>
-                <mat-list-item *ngFor="let req of userRequest">
+                <mat-list-item *ngFor="let req of accessRequest">
                     <div class="col-md-4 text-center">
-                        <p>{{req.reqID}}</p>
+                        <p>{{req.userEmail}}</p>
                     </div>
                     <div class="col-md-4 text-center">
                         <p><b>{{req.bookName}}</b></p>

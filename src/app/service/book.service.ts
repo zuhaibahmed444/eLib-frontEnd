@@ -9,8 +9,16 @@ export class BookService {
 
   constructor(private http:HttpClient) { }
 
+  public addBook(book){
+    return this.http.post(`${baseUrl}/book/`,book);
+  }
+
   public getBooks(){
     return this.http.get(`${baseUrl}/book/`);
+  }
+
+  public getBookById(id){
+    return this.http.get(`${baseUrl}/book/${id}`);
   }
 
   public downlaodbookbyid(id){

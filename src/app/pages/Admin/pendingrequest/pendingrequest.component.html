@@ -1,0 +1,44 @@
+<div class="bootstrap-wrapper">
+    <div class="container-fluid">
+        <div *ngIf="pendingRequest">
+            <mat-card style="border-radius: 15px;">
+                <mat-list>
+                    <div mat-subheader>Pending Requests</div>
+                    <mat-list-item>
+                        <div class="col-md-4 text-center">
+                            <p>User Email</p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <p>Book Name</p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <p>Action</p>
+                        </div>
+                        <mat-divider></mat-divider>
+                    </mat-list-item>
+                    <mat-list-item *ngFor="let req of pendingRequest">
+                        <div class="col-md-4 text-center">
+                            <p style="color: #4E9F3D;">{{req.userEmail}}</p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <p style="color: #FF0000;">{{req.bookName}}</p>                   
+                        </div>
+                        <div class="col-md-4 text-center">
+                        <button mat-raised-button color="primary" (click)="onApprove(req.reqID)">Approve</button>
+            
+                        </div>
+                    </mat-list-item>
+                </mat-list>
+    
+            </mat-card>
+
+        </div>
+        <div class="col-md-12" *ngIf="pendingRequest.length == 0">
+            <mat-card>
+              <mat-card-content>
+                <h1>There are No Pending Requests</h1>
+              </mat-card-content>
+            </mat-card>
+          </div>
+    </div>
+</div>

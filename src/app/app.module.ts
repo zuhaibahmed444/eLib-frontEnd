@@ -31,6 +31,17 @@ import { UsermininavComponent } from './pages/user/usermininav/usermininav.compo
 import { ViewbookComponent } from './pages/user/viewbook/viewbook.component';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import {MatChipsModule} from '@angular/material/chips';
+import { UseraccessedComponent } from './pages/user/useraccessed/useraccessed.component';
+import { NgxUiLoaderHttpModule, NgxUiLoaderModule} from 'ngx-ui-loader';
+import { AddbookComponent } from './pages/Admin/addbook/addbook.component';
+import { PendingrequestComponent } from './pages/Admin/pendingrequest/pendingrequest.component';
+import { AllrequestComponent } from './pages/Admin/allrequest/allrequest.component';
+import { BooksComponent } from './pages/Admin/books/books.component';
+import { WelcomeComponent } from './pages/Admin/welcome/welcome.component';
+import { BookviewComponent } from './pages/Admin/bookview/bookview.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -49,6 +60,13 @@ import {MatChipsModule} from '@angular/material/chips';
     UserrequestComponent,
     UsermininavComponent,
     ViewbookComponent,
+    UseraccessedComponent,
+    AddbookComponent,
+    PendingrequestComponent,
+    AllrequestComponent,
+    BooksComponent,
+    WelcomeComponent,
+    BookviewComponent,
   ],
   imports: [
     BrowserModule,
@@ -65,7 +83,11 @@ import {MatChipsModule} from '@angular/material/chips';
     MatToolbarModule,
     MatListModule,
     PdfViewerModule,
-    MatChipsModule
+    MatChipsModule,
+    NgxUiLoaderModule,    
+    NgxUiLoaderHttpModule.forRoot({
+      showForeground: true,
+    }),
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]

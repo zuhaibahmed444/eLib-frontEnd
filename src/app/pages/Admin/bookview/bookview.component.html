@@ -1,0 +1,75 @@
+<div class="bootstrap-wrapper">
+    <div class="container-fluid">
+        <mat-card class="mb20" style="border-radius: 15px;">
+            <mat-card-header>
+                <mat-card-title>
+                  Title : {{bookDetails.title}}
+                </mat-card-title>
+                <mat-card-subtitle>
+                    Year : {{ bookDetails.year }}
+                  </mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <h2>Author : {{bookDetails.author}}</h2>
+                <h2>BookID : {{bookDetails.bookId}}</h2>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="mb20" style="border-radius: 15px;">
+            <mat-list>
+                <div mat-subheader>Users Accessing This Book</div>
+                <mat-list-item>
+                    <div class="col-md-4 text-center">
+                        <p>User Email</p>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <p>Issued Date</p>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <p>Expiry Date</p>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <p>Status</p>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <p>Action</p>
+                    </div>
+                <mat-divider></mat-divider>
+                </mat-list-item>
+                <mat-list-item *ngFor="let d of userDeatils ">
+                    <div class="col-md-4 text-center">
+                        <p>{{d.userEmail}}</p>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <p>{{d.issuedDate}}</p>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <p>{{d.expiredDate}}</p>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <div *ngIf="d.active ; else NotActive">
+                            <mat-chip-list  aria-label="Fish selection">
+                                <mat-chip style="margin-right: auto; margin-left: auto;" class="matapp">
+                                   Active
+                                </mat-chip>
+                            </mat-chip-list>
+                          </div>
+                          
+                          <ng-template #NotActive>
+                            <mat-chip-list aria-label="Fish selection">
+                                <mat-chip style="margin-right: auto; margin-left: auto;" color="warn" selected>
+                                      Not Active
+                                </mat-chip>
+                            </mat-chip-list>
+                          </ng-template>  
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <div *ngIf="d.active">
+                            <button mat-raised-button color="warn" (click)="revokeBook(d.userEmail)">Revoke</button>
+                        </div>
+                    </div>
+
+                </mat-list-item>
+            </mat-list>
+        </mat-card>
+    </div>
+</div>

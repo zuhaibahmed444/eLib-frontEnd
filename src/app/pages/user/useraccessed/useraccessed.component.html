@@ -1,8 +1,8 @@
 <div class="bootstrap-wrapper">
     <div class="container-fluid">
-        <h1 class="mt20">Active Books</h1>
-        <div class="row mt20" *ngIf="Activebooks">
-            <div class="col-md-3"  style="width: 100%;"  *ngFor="let b of Activebooks">
+        <h1 class="mt20">All Books You have Accessed till Date</h1>
+        <div class="row mt20" *ngIf="AllBooks">
+            <div class="col-md-3"  style="width: 100%;"  *ngFor="let b of AllBooks">
                 <mat-card class="mb20" style="border-radius: 15px;">
                     <mat-card-header>
                         <div mat-card-avatar class="example-header-image"></div>
@@ -25,23 +25,13 @@
                             </mat-chip>
                         </mat-chip-list>
                     </mat-card-content>
-                    <mat-card-action>
-                        <button
-                        (click)="downloadBook(b.bookId)"
-                        mat-button
-                        color="primary"
-                        class="ml10"
-                        >
-                         Download
-                        </button>
-                    </mat-card-action>
 
                 </mat-card>
             </div>
-            <div class="col-md-12" *ngIf="Activebooks.length == 0">
+            <div class="col-md-12" *ngIf="AllBooks.length == 0">
                 <mat-card>
                   <mat-card-content>
-                    <h1>There are No Active Books for this User</h1>
+                    <h1>There are No Books Accessed By this Account</h1>
                   </mat-card-content>
                 </mat-card>
               </div>

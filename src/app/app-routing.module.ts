@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { SignupComponent } from './pages/signup/signup.component';
@@ -12,6 +12,13 @@ import { UserrequestComponent } from './pages/user/userrequest/userrequest.compo
 import { AdminGuard } from './service/admin.guard';
 import { UserbooksComponent } from './pages/user/userbooks/userbooks.component';
 import { ViewbookComponent } from './pages/user/viewbook/viewbook.component';
+import { UseraccessedComponent } from './pages/user/useraccessed/useraccessed.component';
+import { AddbookComponent } from './pages/Admin/addbook/addbook.component';
+import { PendingrequestComponent } from './pages/Admin/pendingrequest/pendingrequest.component';
+import { WelcomeComponent } from './pages/Admin/welcome/welcome.component';
+import { BooksComponent } from './pages/Admin/books/books.component';
+import { AllrequestComponent } from './pages/Admin/allrequest/allrequest.component';
+import { BookviewComponent } from './pages/Admin/bookview/bookview.component';
 
 const routes: Routes = [
   {
@@ -37,8 +44,33 @@ const routes: Routes = [
   {
     path: 'admin',
     component : AdmindashboardComponent,
-    pathMatch: 'full',
-    canActivate:[AdminGuard]
+    canActivate:[AdminGuard],
+    children: [
+      {
+        path :'',
+        component : WelcomeComponent 
+      },
+      {
+        path: 'add',
+        component: AddbookComponent
+      },
+      {
+        path: 'pendingreq',
+        component : PendingrequestComponent
+      },
+      {
+        path: 'books',
+        component : BooksComponent
+      },
+      {
+        path: 'allreq',
+        component : AllrequestComponent
+      }
+      ,{
+        path:'book/:bookId',
+        component: BookviewComponent
+      }
+    ]
   },
   {
     path: 'user',
@@ -52,6 +84,10 @@ const routes: Routes = [
       {
         path: 'book',
         component: UserbooksComponent,
+      },
+      {
+        path: 'book/all',
+        component: UseraccessedComponent
       },
       {
         path: 'request',

@@ -1,1 +1,18 @@
-<p>sidebar works!</p>
+<mat-card style="border-radius: 15px;">
+    <mat-action-list>
+      <div mat-subheader>Menu</div>
+      <button routerLink="/admin/add" mat-list-item>
+        <mat-icon mat-list-icon>add_circle_outline</mat-icon> Add Book
+      </button>
+      <button routerLink="/admin/pendingreq" mat-list-item>
+        <mat-icon mat-list-icon>play_for_work</mat-icon> Pending Requests
+      </button>
+      <button routerLink="/admin/allreq" mat-list-item>
+        <mat-icon mat-list-icon>done_outline</mat-icon> All Requests
+      </button>
+      <button routerLink="/admin/books" mat-list-item>
+        <mat-icon mat-list-icon>book</mat-icon> Books
+      </button>
+    </mat-action-list>
+  </mat-card>
+  

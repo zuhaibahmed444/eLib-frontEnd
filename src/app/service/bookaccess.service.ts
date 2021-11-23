@@ -27,4 +27,15 @@ export class BookaccessService {
   public revokeBook(req:any){
     return this.http.post(`${baseUrl}/bookassign/revoke`,req);
   }
+
+  public revokecsv(file:any){
+    return this.http.post(`${baseUrl}/bookassign/csv`,file);
+  }
+
+  public getUserActiveBookCount(userId:any){
+    return this.http.get(`${baseUrl}/bookassign/book-active/count/${userId}`);
+  }
+  public getUserAllBookCount(userId:any){
+    return this.http.get(`${baseUrl}/bookassign/book-all/count/${userId}`);
+  }
 }

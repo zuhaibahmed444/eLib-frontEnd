@@ -19,6 +19,8 @@ import { WelcomeComponent } from './pages/Admin/welcome/welcome.component';
 import { BooksComponent } from './pages/Admin/books/books.component';
 import { AllrequestComponent } from './pages/Admin/allrequest/allrequest.component';
 import { BookviewComponent } from './pages/Admin/bookview/bookview.component';
+import { RevokeComponent } from './pages/admin/revoke/revoke.component';
+import { UserwelcomeComponent } from './pages/user/userwelcome/userwelcome.component';
 
 const routes: Routes = [
   {
@@ -69,6 +71,10 @@ const routes: Routes = [
       ,{
         path:'book/:bookId',
         component: BookviewComponent
+      },
+      {
+        path: 'revoke',
+        component: RevokeComponent
       }
     ]
   },
@@ -77,6 +83,10 @@ const routes: Routes = [
     component: UserdashboardComponent,
     canActivate: [UserGuard],
     children: [
+      {
+        path:'',
+        component : UserwelcomeComponent 
+      },
       {
         path: 'all',
         component: UserallbooksComponent,
@@ -93,7 +103,6 @@ const routes: Routes = [
         path: 'request',
         component:UserrequestComponent
       }
-
     ]
   },
   {

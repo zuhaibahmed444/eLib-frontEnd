@@ -24,4 +24,8 @@ export class BookService {
   public downlaodbookbyid(id){
     return this.http.get(`${baseUrl}/book/download/${id}`);
   }
+
+  public getBookCount(){
+    return this.http.get(`${baseUrl}/book/count`);
+  }
 }

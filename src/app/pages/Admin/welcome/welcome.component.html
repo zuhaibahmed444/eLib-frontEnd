@@ -1,1 +1,54 @@
-<h1>Welcome ADMIN</h1>
+<div class="bootstrap-wrapper">
+    <div class="container-fluid">
+        <h1 class="mt20">DASHBOARD</h1>
+        <div class="row mt20">
+            <div class="col-md-4" >
+                <mat-card class="mb20 hh" style="text-align: center;border-radius: 15px; background-color: #54CBE3;">
+                    <mat-card-header>
+                      </mat-card-header>
+                      <mat-card-content>
+                        <div><mat-icon class="mat-icon" mat-list-icon>account_circle</mat-icon></div>
+                        <div>
+                            <b class="mb-20">Users</b>
+                            <br>
+                            <br>
+                            <h1 style="font-size: 50px;" class="mt-20">{{ userCount }}</h1>
+                            </div>
+                      </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="col-md-4" >
+                <mat-card class="mb20 hh" style="text-align: center;border-radius: 15px; background-color:  #FFE54F;">
+                    <mat-card-header>
+                      </mat-card-header>
+                      <mat-card-content>
+                        <div><mat-icon class="mat-icon" mat-list-icon>book</mat-icon></div>
+                        <div>
+                        <b class="mb-20">Books</b>
+                        <br>
+                        <br>
+                        <h1 style="font-size: 50px;" class="mt-20">{{ bookCount }}</h1>
+                        </div>
+                      </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="col-md-4" >
+                <mat-card class="mb20 hh" style="text-align: center;border-radius: 15px; background-color: #94CC39;">
+                    <mat-card-header>
+                      </mat-card-header>
+                      <mat-card-content>
+                        <div><mat-icon class="mat-icon" mat-list-icon>done_outline</mat-icon></div>
+                        <div>
+                            <b class="mb-20">Pending Request</b>
+                            <br>
+                            <br>
+                            <h1 style="font-size: 50px;" class="mt-20">{{ reqCount }}</h1>
+                            </div>
+                      </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+    
+    </div>
+    
+</div>

@@ -24,6 +24,10 @@ export class AccessService {
   public getAccessReqByAdmin(){
     return this.http.get(`${baseUrl}/accessreq/active`);
   }
+
+  public getAccessReqCount(){
+    return this.http.get(`${baseUrl}/accessreq/count`);
+  }
   
 
 }

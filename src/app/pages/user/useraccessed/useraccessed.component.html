@@ -9,19 +9,24 @@
                         <mat-card-title>
                             <mat-chip-list aria-label="Fish selection">
                                 <mat-chip color="accent" selected>
-                                    {{b.title}}
+                                    {{b.book.title}}
                                 </mat-chip>
                             </mat-chip-list>
                           </mat-card-title>
                           <mat-card-subtitle>
-                            {{ b.year }}
+                            {{ b.book.year }}
                           </mat-card-subtitle>
                     </mat-card-header>
                     <mat-card-content>
-                        <!-- <h3 class="truncate">Author : {{ b.author }}</h3> -->
+                        <h3 class="truncate">Author : {{ b.book.author }}</h3>
                         <mat-chip-list aria-label="Fish selection">
                             <mat-chip color="primary" selected>
-                                Author : {{ b.author }}
+                                Issued Date : {{ b.issueDate}}
+                            </mat-chip>
+                        </mat-chip-list>
+                        <mat-chip-list aria-label="Fish selection">
+                            <mat-chip color="warn" selected>
+                                Expired Date : {{ b.expiryDate}}
                             </mat-chip>
                         </mat-chip-list>
                     </mat-card-content>

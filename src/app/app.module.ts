@@ -39,6 +39,8 @@ import { AllrequestComponent } from './pages/Admin/allrequest/allrequest.compone
 import { BooksComponent } from './pages/Admin/books/books.component';
 import { WelcomeComponent } from './pages/Admin/welcome/welcome.component';
 import { BookviewComponent } from './pages/Admin/bookview/bookview.component';
+import { RevokeComponent } from './pages/admin/revoke/revoke.component';
+import { UserwelcomeComponent } from './pages/user/userwelcome/userwelcome.component';
 
 
 
@@ -67,6 +69,8 @@ import { BookviewComponent } from './pages/Admin/bookview/bookview.component';
     BooksComponent,
     WelcomeComponent,
     BookviewComponent,
+    RevokeComponent,
+    UserwelcomeComponent,
   ],
   imports: [
     BrowserModule,

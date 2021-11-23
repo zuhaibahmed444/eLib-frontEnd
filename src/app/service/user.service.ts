@@ -13,4 +13,8 @@ export class UserService {
   public addUser(user:any) {
     return this.http.post(`${baseUrl}/user/`, user);
   }
+
+  public getUserCount(){
+    return this.http.get(`${baseUrl}/user/count`);
+  }
 }

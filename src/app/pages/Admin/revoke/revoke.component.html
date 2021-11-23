@@ -1,0 +1,33 @@
+<div class="bootstrap-wrapper">
+    <div class="container-fluid">
+        <mat-card class="mb20" style="border-radius: 15px;">
+            <div class="text-center">
+                <h1>Revoke Books </h1>
+                <h3>Please upload the CSV File in format as Shown Below</h3>
+
+            </div>
+            <div class="text-center mt-30">
+                <div>
+                    <img src="../../../../assets/revoke.png" alt="">
+                </div>
+                <div>
+                    <a href="https://drive.google.com/file/d/13H7MU2-PqGAA2dmGkLXkRNhkOTYgY4K9/view?usp=sharing" download>Download Sample CSV File</a>
+                </div>
+                
+            </div>
+            <div class="text-center" style="margin-top: 30px;"> 
+                <div>
+                    <h1>Fill the Downloaded Sample file from the Above Link and Upload</h1>
+                    <input mat-button color = "primary" type="file" (change)="onFileChanged($event)">
+                </div>
+                <br>
+                <div>
+                    <button mat-raised-button color="primary" (click)="onSubmit()">
+                        Upload File
+                    </button>
+                </div>
+            </div>
+
+        </mat-card>
+    </div>
+</div>

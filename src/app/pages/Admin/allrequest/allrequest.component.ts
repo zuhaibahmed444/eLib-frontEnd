@@ -8,6 +8,8 @@ import { AccessService } from 'src/app/service/access.service';
 })
 export class AllrequestComponent implements OnInit {
   accessRequest :any
+  p: Number = 1;
+  count: Number = 8;
   constructor(private access:AccessService) { }
 
   ngOnInit(): void {

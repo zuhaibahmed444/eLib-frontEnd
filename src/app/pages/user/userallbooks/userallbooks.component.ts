@@ -11,12 +11,15 @@ import Swal from 'sweetalert2';
 })
 export class UserallbooksComponent implements OnInit {
   books
+  searchText
   req = {
     bookId : '',
     bookName : '',
     userEmail :''
   }
   email =''
+  p: Number = 1;
+  count: Number = 8;
   constructor(private book : BookService ,private login :LoginService,private access : AccessService) { }
 
   ngOnInit(): void {

@@ -11,7 +11,6 @@ import { UserallbooksComponent } from './pages/user/userallbooks/userallbooks.co
 import { UserrequestComponent } from './pages/user/userrequest/userrequest.component';
 import { AdminGuard } from './service/admin.guard';
 import { UserbooksComponent } from './pages/user/userbooks/userbooks.component';
-import { ViewbookComponent } from './pages/user/viewbook/viewbook.component';
 import { UseraccessedComponent } from './pages/user/useraccessed/useraccessed.component';
 import { AddbookComponent } from './pages/Admin/addbook/addbook.component';
 import { PendingrequestComponent } from './pages/Admin/pendingrequest/pendingrequest.component';
@@ -21,6 +20,7 @@ import { AllrequestComponent } from './pages/Admin/allrequest/allrequest.compone
 import { BookviewComponent } from './pages/Admin/bookview/bookview.component';
 import { RevokeComponent } from './pages/admin/revoke/revoke.component';
 import { UserwelcomeComponent } from './pages/user/userwelcome/userwelcome.component';
+import { ViewbookComponent } from './pages/user/viewbook/viewbook.component';
 
 const routes: Routes = [
   {
@@ -102,14 +102,13 @@ const routes: Routes = [
       {
         path: 'request',
         component:UserrequestComponent
+      },
+      {
+        path :'view/:bookId',
+        component : ViewbookComponent
       }
     ]
   },
-  {
-    path: 'view-book',
-    component : ViewbookComponent,
-    pathMatch: 'full',
-  }
 
 ];
 

@@ -10,7 +10,8 @@ import { LoginService } from 'src/app/service/login.service';
 export class UseraccessedComponent implements OnInit {
   userId =''
   AllBooks : any
-
+  p: Number = 1;
+  count: Number = 8;
   constructor(private login:LoginService,private bookaccess:BookaccessService) { }
 
   ngOnInit(): void {

@@ -1,45 +1,48 @@
 <div class="bootstrap-wrapper">
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-6">
+        <div>
+            <div>
                 <mat-card style="border-radius: 15px; margin-top: 20px;">
                     <h1>Info</h1>
-                    <div>
-                        <mat-card class="mb20 hh" style="text-align: center;border-radius: 15px; background-color: #FFE54F;">
-                            <mat-card-header>
-                              </mat-card-header>
-                              <mat-card-content>
-                                <div><mat-icon class="mat-icon" mat-list-icon>book</mat-icon></div>
-                                <div>
-                                    <b class="mb-20">Active Books</b>
-                                    <br>
-                                    <br>
-                                    <h1 style="font-size: 50px;" class="mt-20">{{ activeCount }}</h1>
-                                    </div>
-                              </mat-card-content>
-                        </mat-card>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <mat-card class="mb20 hh" style="text-align: center;border-radius: 15px; background-color: #FFE54F;">
+                                <mat-card-header>
+                                  </mat-card-header>
+                                  <mat-card-content>
+                                    <div><mat-icon class="mat-icon" mat-list-icon>book</mat-icon></div>
+                                    <div>
+                                        <b class="mb-20">Active Books</b>
+                                        <br>
+                                        <br>
+                                        <h1 style="font-size: 50px;" class="mt-20">{{ activeCount }}</h1>
+                                        </div>
+                                  </mat-card-content>
+                            </mat-card>
+
+                        </div>
+                        <div class="col-md-6">
+                            <mat-card class="mb20 hh" style="text-align: center;border-radius: 15px; background-color: #94CC39;">
+                                <mat-card-header>
+                                  </mat-card-header>
+                                  <mat-card-content>
+                                    <div><mat-icon class="mat-icon" mat-list-icon>menu_book</mat-icon></div>
+                                    <div>
+                                        <b class="mb-20">All Accessed Books</b>
+                                        <br>
+                                        <br>
+                                        <h1 style="font-size: 50px;" class="mt-20">{{ allCount }}</h1>
+                                        </div>
+                                  </mat-card-content>
+                            </mat-card>
+    
+
+                        </div>
                     </div>
-                    <div>
-                        <mat-card class="mb20 hh" style="text-align: center;border-radius: 15px; background-color: #94CC39;">
-                            <mat-card-header>
-                              </mat-card-header>
-                              <mat-card-content>
-                                <div><mat-icon class="mat-icon" mat-list-icon>menu_book</mat-icon></div>
-                                <div>
-                                    <b class="mb-20">All Accessed Books</b>
-                                    <br>
-                                    <br>
-                                    <h1 style="font-size: 50px;" class="mt-20">{{ allCount }}</h1>
-                                    </div>
-                              </mat-card-content>
-                        </mat-card>
-
-
-                    </div>
-
+                    
                 </mat-card>
             </div>
-            <div class="col-md-6">
+            <div>
                 <mat-card style="border-radius: 15px; margin-top: 20px;">
                     <mat-card-content>
                         <h1>User Details</h1>

@@ -12,6 +12,8 @@ import baseUrl from 'src/app/service/helper';
 export class UserbooksComponent implements OnInit {
   userId = ''
   Activebooks :any
+  p: Number = 1;
+  count: Number = 8;
 
   constructor(private login : LoginService,private bookaccess : BookaccessService,private book : BookService) { }
 
@@ -27,6 +29,11 @@ export class UserbooksComponent implements OnInit {
     let url = `${baseUrl}/book/download/${bookId}`
     console.log(bookId)
     window.open(url, "_blank");
+  }
+
+  viewBook(bookId){
+    console.log(bookId)
+    console.log("Button view")
   }
 
 }

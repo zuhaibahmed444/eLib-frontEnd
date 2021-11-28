@@ -28,8 +28,6 @@ import { UserbooksComponent } from './pages/user/userbooks/userbooks.component';
 import { UserallbooksComponent } from './pages/user/userallbooks/userallbooks.component';
 import { UserrequestComponent } from './pages/user/userrequest/userrequest.component';
 import { UsermininavComponent } from './pages/user/usermininav/usermininav.component';
-import { ViewbookComponent } from './pages/user/viewbook/viewbook.component';
-import { PdfViewerModule } from 'ng2-pdf-viewer';
 import {MatChipsModule} from '@angular/material/chips';
 import { UseraccessedComponent } from './pages/user/useraccessed/useraccessed.component';
 import { NgxUiLoaderHttpModule, NgxUiLoaderModule} from 'ngx-ui-loader';
@@ -41,9 +39,10 @@ import { WelcomeComponent } from './pages/Admin/welcome/welcome.component';
 import { BookviewComponent } from './pages/Admin/bookview/bookview.component';
 import { RevokeComponent } from './pages/admin/revoke/revoke.component';
 import { UserwelcomeComponent } from './pages/user/userwelcome/userwelcome.component';
-
-
-
+import { NgxPaginationModule } from 'ngx-pagination';
+import { NgxDocViewerModule } from 'ngx-doc-viewer';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { ViewbookComponent } from './pages/user/viewbook/viewbook.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +60,6 @@ import { UserwelcomeComponent } from './pages/user/userwelcome/userwelcome.compo
     UserallbooksComponent,
     UserrequestComponent,
     UsermininavComponent,
-    ViewbookComponent,
     UseraccessedComponent,
     AddbookComponent,
     PendingrequestComponent,
@@ -71,6 +69,7 @@ import { UserwelcomeComponent } from './pages/user/userwelcome/userwelcome.compo
     BookviewComponent,
     RevokeComponent,
     UserwelcomeComponent,
+    ViewbookComponent,
   ],
   imports: [
     BrowserModule,
@@ -86,13 +85,15 @@ import { UserwelcomeComponent } from './pages/user/userwelcome/userwelcome.compo
     HttpClientModule,
     MatToolbarModule,
     MatListModule,
-    PdfViewerModule,
     MatChipsModule,
     NgxUiLoaderModule,    
     NgxUiLoaderHttpModule.forRoot({
       showForeground: true,
     }),
-  ],
+    NgxPaginationModule,
+    NgxDocViewerModule,
+    Ng2SearchPipeModule
+    ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })

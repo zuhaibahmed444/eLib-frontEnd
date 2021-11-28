@@ -1,42 +1,20 @@
-<mat-toolbar class="mattool">
-    <div class="col-md-3">
-        <a
-        routerLink="/user/book"
-        mat-icon-button
-        class="example-icon"
-        aria-label="Example icon-button with menu icon"
-      >
-        Active Books
-      </a>
-    </div>
-    <div class="col-md-3">
-        <a
-        routerLink="/user/all"
-        mat-icon-button
-        class="example-icon"
-        aria-label="Example icon-button with menu icon"
-      >
-       Books On Portal
-      </a>
-    </div>
-    <div class="col-md-3">
-        <a
-        routerLink="/user/book/all"
-        mat-icon-button
-        class="example-icon"
-        aria-label="Example icon-button with menu icon"
-      >
-       All Accessed Books 
-      </a>
-    </div>
-    <div class="col-md-3">
-        <a
-        routerLink="/user/request"
-        mat-icon-button
-        class="example-icon"
-        aria-label="Example icon-button with menu icon"
-      >
-       Your Requests 
-      </a>
-    </div>
-</mat-toolbar>
+<mat-card style="border-radius: 15px;">
+  <mat-action-list>
+    <div mat-subheader>Menu</div>
+    <button routerLink="/user/book" mat-list-item>
+      <mat-icon mat-list-icon>book</mat-icon> Active books
+    </button>
+    <button routerLink="/user/all" mat-list-item>
+      <mat-icon mat-list-icon>description</mat-icon> Book On Portal
+    </button>
+    <button routerLink="/user/book/all" mat-list-item>
+      <mat-icon mat-list-icon>menu_book</mat-icon> All Accessed Books
+    </button>
+    <button routerLink="/user/request" mat-list-item>
+      <mat-icon mat-list-icon>done_outline</mat-icon> Requests
+    </button>
+  </mat-action-list>
+</mat-card>
+
+
+

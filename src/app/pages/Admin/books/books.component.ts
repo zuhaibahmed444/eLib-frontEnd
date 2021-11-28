@@ -8,6 +8,9 @@ import { BookService } from 'src/app/service/book.service';
 })
 export class BooksComponent implements OnInit {
   books:any;
+  searchText
+  p: Number = 1;
+  count: Number = 6;
   constructor(private book:BookService) { }
 
   ngOnInit(): void {

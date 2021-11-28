@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <h1 class="mt20">Active Books</h1>
         <div class="row mt20" *ngIf="Activebooks">
-            <div class="col-md-3"  style="width: 100%;"  *ngFor="let b of Activebooks">
+            <div class="col-md-3"  style="width: 100%;"  *ngFor="let b of Activebooks| paginate: { itemsPerPage: count, currentPage: p }">
                 <mat-card class="mb20" style="border-radius: 15px;">
                     <mat-card-header>
                         <div mat-card-avatar class="example-header-image"></div>
@@ -27,14 +27,31 @@
                         </mat-chip-list>
                     </mat-card-content>
                     <mat-card-action>
-                        <button
-                        (click)="downloadBook(b.book.bookId)"
-                        mat-button
-                        color="primary"
-                        class="ml10"
-                        >
-                         Download
-                        </button>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <button
+                                (click)="downloadBook(b.book.bookId)"
+                                mat-button
+                                color="primary"
+                                class="ml10"
+                                >
+                                 Download
+                                </button>
+    
+                            </div>
+                            <div class="col-md-6">
+                                <button
+                                mat-button
+                                [routerLink]="'/user/view/'+b.book.bookId"
+                                color="primary"
+                                class="ml10"
+                                >
+                                 View
+                                </button>
+                                
+                            </div>
+                        </div>
+                        
                     </mat-card-action>
 
                 </mat-card>
@@ -48,5 +65,8 @@
               </div>
 
         </div>
+        <div class="text-center">
+            <pagination-controls  (pageChange)="p = $event"></pagination-controls>
+          </div>
     </div>
 </div>

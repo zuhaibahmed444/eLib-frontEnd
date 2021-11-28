@@ -10,6 +10,8 @@ import { LoginService } from 'src/app/service/login.service';
 export class UserrequestComponent implements OnInit {
   email = '';
   userRequest :any
+  p: Number = 1;
+  count: Number = 8;
 
   constructor(private login : LoginService,private access:AccessService) { }
 

@@ -16,7 +16,7 @@
                         </div>
                         <mat-divider></mat-divider>
                     </mat-list-item>
-                    <mat-list-item *ngFor="let req of pendingRequest">
+                    <mat-list-item *ngFor="let req of pendingRequest | paginate: { itemsPerPage: count, currentPage: p }">
                         <div class="col-md-4 text-center">
                             <p style="color: #4E9F3D;">{{req.userEmail}}</p>
                         </div>
@@ -39,6 +39,9 @@
                 <h1>There are No Pending Requests</h1>
               </mat-card-content>
             </mat-card>
+          </div>
+          <div class="text-center">
+            <pagination-controls  (pageChange)="p = $event"></pagination-controls>
           </div>
     </div>
 </div>

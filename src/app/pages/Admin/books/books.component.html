@@ -1,8 +1,17 @@
 <div class="bootstrap-wrapper">
     <div class="container-fluid">
         <h1 class="mt20">Books On Portal</h1>
+        <div class="text-center">
+            <form class="example-form">
+                <mat-form-field class="example-full-width">
+                <span matPrefix> </span>
+                <input type="tel" matInput placeholder="Search" name= "search" [(ngModel)]= "searchText">
+                <button matSuffix mat-button><mat-icon >search</mat-icon></button>
+                </mat-form-field>
+            </form>
+        </div>
         <div class="row mt20" *ngIf="books">
-            <div class="col-md-4"  style="width: 100%;"  *ngFor="let b of books">
+            <div class="col-md-4"  style="width: 100%;"  *ngFor="let b of books| paginate: { itemsPerPage: count, currentPage: p } | filter:searchText">
                 <mat-card class="mb20" style="border-radius: 15px;">
                     <mat-card-header>
                         <div mat-card-avatar class="example-header-image"></div>
@@ -31,5 +40,8 @@
             </div>
 
         </div>
+        <div class="text-center">
+            <pagination-controls  (pageChange)="p = $event"></pagination-controls>
+          </div>
     </div>
 </div>

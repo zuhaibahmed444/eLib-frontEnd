@@ -15,7 +15,7 @@
                     </div>
                     <mat-divider></mat-divider>
                 </mat-list-item>
-                <mat-list-item *ngFor="let req of accessRequest">
+                <mat-list-item *ngFor="let req of accessRequest | paginate: { itemsPerPage: count, currentPage: p }">
                     <div class="col-md-4 text-center">
                         <p>{{req.userEmail}}</p>
                     </div>
@@ -44,5 +44,9 @@
             </mat-list>
 
         </mat-card>
+
+        <div class="text-center">
+            <pagination-controls  (pageChange)="p = $event"></pagination-controls>
+          </div>
     </div>
 </div>

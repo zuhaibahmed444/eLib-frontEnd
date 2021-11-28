@@ -11,6 +11,8 @@ import Swal from 'sweetalert2';
 export class PendingrequestComponent implements OnInit {
   pendingRequest : any
   reqid = '';
+  p: Number = 1;
+  count: Number = 8;
   constructor(private access:AccessService , private bookassign : BookaccessService) { }
 
   ngOnInit(): void {

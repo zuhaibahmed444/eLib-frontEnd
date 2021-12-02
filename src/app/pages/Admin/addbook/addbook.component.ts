@@ -10,6 +10,7 @@ import Swal from 'sweetalert2';
 })
 export class AddbookComponent implements OnInit {
   selectedFile: File;
+  image:File;
   book = {
     bookName: '',
     bookAuthor: '',
@@ -24,6 +25,12 @@ export class AddbookComponent implements OnInit {
    public onFileChanged(event) {
     //Select File
     this.selectedFile = event.target.files[0];
+  }
+
+  public onImageChanged(event) {
+
+    this.image = event.target.files[0];
+
   }
 
   onUpload(){
@@ -56,6 +63,7 @@ export class AddbookComponent implements OnInit {
     const uploadFileData = new FormData();
     uploadFileData.append('file', this.selectedFile);
     uploadFileData.append('book', st);
+    uploadFileData.append('image', this.image);
     this.bookservice.addBook(uploadFileData).subscribe(
       data =>{
         console.log(data);

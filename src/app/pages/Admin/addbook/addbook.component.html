@@ -46,6 +46,11 @@
               /></mat-form-field>
             </form>
             <div>
+              <h2>Add Book-Cover</h2>
+              <input mat-button color="primary" type="file" (change)="onImageChanged($event)">
+            </div>
+            <div>
+              <h2>Add Book-File</h2>
                 <input mat-button color = "primary" type="file" (change)="onFileChanged($event)">
             </div>
             <br>
